@@ -1,38 +1,112 @@
-.App {
+:root {
+  --accent: #32bad2;
+  --primary: #68ccde;
+  --secondary: #0a292e;
+  --text: #c8d3d6;
+  --background: #eef9fb;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+.header-container {
   text-align: center;
+  margin-bottom: 2rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  color: var(--accent); /* Matched color */
+  font-size: 44px;
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Layout styles */
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: var(--background);
+}
+.instructions {
+  margin-top: 1.5rem;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: var(--text); /* Adjust color as needed */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.highlight {
+  color: var(--accent); /* Highlight color */
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.AppGlass {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 16px;
+  width: 97%;
+  height: 97%;
+  background-color: var(--accent);
+  border-radius: 2rem;
+  overflow-y: auto;
+}
+
+.dashboard-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #0a292e;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.dashboard-photo {
+  width: 320px;
+  height: 320px;
+  border-radius: 10px;
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+.dashboard-text {
+  color: var(--text);
+  flex-grow: 1;
+}
+
+.dashboard-button {
+  margin-top: 1.5rem;
+  margin-right: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 0.75rem 1.5rem; /* Adjust padding for larger size */
+  background-color: var(--accent); /* Match background color */
+  color: var(--background);
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.dashboard-button:hover {
+  background-color: var(--secondary);
+  border: solid 1px aliceblue;
+}
+
+.dashboard-button:active {
+  transform: translateY(2px);
+}
+
+.dashboard-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  border-radius: 0.5rem;
+  grid-column: span 2;
+  text-align: center;
+  /* position: relative;  */
 }
