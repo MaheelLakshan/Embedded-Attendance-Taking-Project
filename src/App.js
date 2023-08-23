@@ -85,7 +85,7 @@ function App() {
                   <button onClick={generateExcel} className="dashboard-button">
                     Generate Excel
                   </button>
-                  {/* <button onClick={() => window.print()}>Print</button> */}
+
                   <button onClick={clearData} className="dashboard-button">
                     Clear Data
                   </button>
@@ -106,23 +106,12 @@ function App() {
               <p>No card has been scanned.</p>
             ) : (
               <div>
-                <p>
-                  Index Number: {firebaseData[firebaseData.length - 1]?.name}
-                </p>
-                <p>Age: {firebaseData[firebaseData.length - 1]?.age}</p>
+                <p>Name: {firebaseData[firebaseData.length - 1]?.name}</p>
+                <p>Index: {firebaseData[firebaseData.length - 1]?.index}</p>
                 <p>Email: {firebaseData[firebaseData.length - 1]?.email}</p>
               </div>
             )}
           </div>
-          {/* <div>
-            {firebaseData.map((item, index) => (
-              <div key={index}>
-                <p>Index Number: {item.name}</p>
-                <p>Age: {item.age}</p>
-                <p>Email: {item.email.email}</p>
-              </div>
-            ))}
-          </div> */}
         </div>
       </div>
     </div>
